@@ -1,0 +1,18 @@
+-- Could not install PySpark due to less tmp size and these steps helped to increase tmp
+Move /tmp to a Larger Volume
+
+sudo mkdir /mnt/tmp
+
+sudo nano /etc/fstab
+
+-- add the below line to the above file
+/mnt/tmp   /tmp    none    bind    0   0
+
+-- remount tmp
+sudo mount -a
+
+
+
+-- to find java installation path
+sudo alternatives --config java
+

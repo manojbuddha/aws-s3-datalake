@@ -1,0 +1,16 @@
+1) Download the latest version of spark from https://spark.apache.org/downloads.html
+Link used: https://dlcdn.apache.org/spark/spark-3.5.4/spark-3.5.4-bin-hadoop3.tgz
+
+2) Unzip the file. And create link with spark using the below command
+export SPARK_HOME=/opt/spark
+
+sudo ln -s [unzipped_folder_name] spark
+
+3) Install open-java-sdk. Below commnad is used to install java-open-sdk for aws-linux.
+
+sudo dnf install java-21-amazon-corretto
+
+4) Set environment variables for spark, java. Since we are using unified version of spark with hadoop, hadoop path with be handled by spark. But other usecases may require seperate installation of Hadoop.
+
+5) Use the below command to test the spark installation and open spark command-line.
+$SPARK_HOME/bin/spark-shell
